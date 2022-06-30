@@ -1,0 +1,16 @@
+{
+  "id": "f6f00f5c-8a10-1816-821f-c5655e1c1f6c",
+  "firstName": "Max",
+  "lastName": "Bossert",
+  "email": "abc@test.de",
+  "categories": [
+    "Lohn & Gehalt",
+    "Versicherung",
+    "Transport",
+    "Miete",
+    "Haushalt",
+    "Lebensmittel",
+    "Freizeit"
+  ],
+  "createdAt": "Mon Nov 30 2020 04:23:31 GMT+0000 (UTC)"
+}
