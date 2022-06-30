@@ -17,12 +17,12 @@ export default function OverviewList() {
       }}
     >
       <Stack.Screen
-        name="Brief-Summary"
+        name="BriefSummary"
         component={Overview_List}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name="Detail" component={Overview_Details} />
-      <Stack.Screen name="Edit" component={Overview_Edit} />
+      <Stack.Screen name="DetailOverview" component={Overview_Details} />
+      <Stack.Screen name="EditOverview" component={Overview_Edit} />
     </Stack.Navigator>
   );
 }

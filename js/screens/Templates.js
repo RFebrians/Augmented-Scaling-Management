@@ -18,17 +18,17 @@ export default function Templates() {
       }}
     >
       <Stack.Screen
-        name="Vorlagen"
+        name="Template"
         component={Templates_List}
         options={{ headerShown: false }}
       />
       <Stack.Screen
-        name="Details"
+        name="Detail"
         component={Templates_Details}
         options={{ headerShown: true }}
       />
       <Stack.Screen
-        name="Bearbeiten"
+        name="EditTemplate"
         component={Templates_Edit}
         options={{ headerShown: true }}
       />

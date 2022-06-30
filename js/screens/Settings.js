@@ -129,7 +129,7 @@ function Settings(props) {
       .then(() => {
         Alert.alert(
           "Hapus berhasil ️",
-          "Planning " + itemName + " telah dihapus"
+          "Toko" + itemName + " telah dihapus"
         );
       })
       .catch((error) => {
@@ -204,7 +204,7 @@ function Settings(props) {
                             deleteCategory(item);
                           }}
                         >
-                          <Text style={styles.textStyle}>Löschen</Text>
+                          <Text style={styles.textStyle}>Delete</Text>
                         </RectButton>
                       </Animated.View>
                     </View>
@@ -222,7 +222,7 @@ function Settings(props) {
           />
         </FoldableSection>
 
-        <FoldableSection cardTitle="Planning">
+        <FoldableSection cardTitle="Toko">
           <FlatList
             data={props.currentUser.config.stores}
             style={{ height: 200 }}
@@ -248,7 +248,7 @@ function Settings(props) {
                             deleteStore(item);
                           }}
                         >
-                          <Text style={styles.textStyle}>Löschen</Text>
+                          <Text style={styles.textStyle}>Delete</Text>
                         </RectButton>
                       </Animated.View>
                     </View>
@@ -272,7 +272,7 @@ function Settings(props) {
       </View>
 
       <CustomModal isVisible={isCatModalVisible}>
-        <Text style={styles.modalTitle}>Neue Kategorie:</Text>
+        <Text style={styles.modalTitle}>Kategori baru:</Text>
         <TextInput
           placeholder="Kategori"
           style={styles.basicTextInput}

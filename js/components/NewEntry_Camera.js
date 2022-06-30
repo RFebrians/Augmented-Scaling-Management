@@ -106,11 +106,11 @@ export default function NewEntry_Template(props) {
                     size={18}
                     color="white"
                   />
-                  <Text style={styles.previewButtonText}>Neuer Versuch</Text>
+                  <Text style={styles.previewButtonText}>Ulangi</Text>
                 </Pressable>
                 <Pressable onPress={__savePicture} style={styles.previewButton}>
                   <Ionicons name="ios-save-sharp" size={18} color="white" />
-                  <Text style={styles.previewButtonText}>Bild speichern</Text>
+                  <Text style={styles.previewButtonText}>Simpan</Text>
                 </Pressable>
               </View>
             </View>

@@ -37,7 +37,7 @@ function Overview_Edit(props) {
   const [category, setCategory] = useState();
   const [amount, setAmount] = useState(0.0);
   const [amountValue, setAmountValue] = useState(0.0);
-  const [unit, setUnit] = useState("€");
+  const [unit, setUnit] = useState("Rp");
   const [isExpense, setIsExpense] = useState(true);
   const [paymentMethod, setPaymentMethod] = useState(
     selectablePaymentMethods[0].value
@@ -155,7 +155,7 @@ function Overview_Edit(props) {
       });
 
     resetForm();
-    navigation.navigate("Brief-Summary");
+    navigation.navigate("BriefSummary");
   };
 
   return (

@@ -4,12 +4,12 @@ import "firebase/firestore";
 import "firebase/storage"
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyBkqOejg3Je6m75n78ho4S-gdLX3E7VOzw',
-	authDomain: 'forwardproject-2bedf.firebaseapp.com',
-	projectId: 'forwardproject-2bedf',
-	storageBucket: 'forwardproject-2bedf.appspot.com',
-	messagingSenderId: '551104926569',
-	appId: '1:551104926569:web:52f568ed99c121457223f8'
+  apiKey: "AIzaSyDzY77UPCkh9LYcNJNw3HFYnv5roYpKP8A",
+  authDomain: "finance-app-cas21.firebaseapp.com",
+  projectId: "finance-app-cas21",
+  storageBucket: "finance-app-cas21.appspot.com",
+  messagingSenderId: "624102838911",
+  appId: "1:624102838911:web:bcec26cc1636cde066a54a",
 };
 
 export default class Finance_Firebase {

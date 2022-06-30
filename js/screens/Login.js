@@ -27,7 +27,7 @@ function Login(props) {
       );
       if (response && response.user) {
         //Message
-        alert("Login erfolgreich", "Willkommen zurück");
+        alert("Login berhasil", "Selamat datang kembali");
 
         // Get User Data from Firebase
         _getUserProfile(response.user.uid);
@@ -108,8 +108,8 @@ function Login(props) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={{ fontSize: 40, marginBottom: 20 }}>Willkommen zurück</Text>
-      <Text>Bitte loggen Sie sich ein</Text>
+      <Text style={{ fontSize: 35, marginBottom: 20 }}>Management System</Text>
+      <Text></Text>
       <View>
         <TextInput
           placeholder="Email"

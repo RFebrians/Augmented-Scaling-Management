@@ -8,7 +8,7 @@ function Templates_List(props) {
   const navigation = props.navigation;
 
   return (
-    <AppSafeAreaView title="Vorlagen">
+    <AppSafeAreaView title="Template">
       <View style={styles.container}>
         {props.currentUser.config.templates.length > 0 && (
           <FlatList
@@ -19,7 +19,7 @@ function Templates_List(props) {
               <TemplateListItem
                 itemObject={item}
                 onPress={() =>
-                  navigation.navigate("Details", {
+                  navigation.navigate("DetailTemplate", {
                     itemObject: JSON.stringify(item),
                   })
                 }
@@ -29,7 +29,7 @@ function Templates_List(props) {
         )}
         {props.currentUser.config.templates.length === 0 && (
           <Text style={{ alignSelf: "center", fontSize: 20, opacity: 0.5 }}>
-            Keine Templates vorhanden
+            Tidak ada template yang tersedia
           </Text>
         )}
       </View>

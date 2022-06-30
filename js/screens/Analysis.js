@@ -89,17 +89,17 @@ function Analysis(props) {
   };
 
   return (
-    <AppSafeAreaView title="Analyse">
+    <AppSafeAreaView title="Analisis">
       <ScrollView style={styles.container}>
         <Text style={styles.text}>
-          Es liegen Daten für den Zeitraum zwischen{" "}
-          {dataStartDate.toDateString()} und {dataEndDate.toDateString()} vor
+          Data untuk periode antara{" "}
+          {dataStartDate.toDateString()} hingga {dataEndDate.toDateString()}
         </Text>
 
         <Hr />
 
-        <Text style={styles.text}>Jumlah Pendapatan {sumEarnings}€</Text>
-        <Text style={styles.text}>Jumlah Pengeluaran {sumExpenses}€</Text>
+        <Text style={styles.text}>Jumlah Pendapatan : Rp {sumEarnings } </Text>
+        <Text style={styles.text}>Jumlah Pengeluaran : Rp {sumExpenses} </Text>
 
         <Hr />
 
@@ -130,7 +130,7 @@ function Analysis(props) {
             width={Dimensions.get("window").width}
             height={chartHeight}
             yAxisLabel=""
-            yAxisSuffix="€"
+            yAxisSuffix="Rp"
             yAxisInterval={1}
             chartConfig={chartConfig}
             style={styles.chartSelf}

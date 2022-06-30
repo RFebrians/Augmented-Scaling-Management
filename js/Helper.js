@@ -1,10 +1,10 @@
 import firebase from "../js/Firebase";
 
 export const selectablePaymentMethods = [
-  { label: "Barzahlung", value: "cash" },
-  { label: "EC-Karte", value: "debit-card" },
-  { label: "Kreditkarte", value: "credit-card" },
-  { label: "PayPal", value: "paypal" },
+  { label: "Cash", value: "cash" },
+  { label: "Debit", value: "debit-card" },
+  { label: "Kartu Kredit", value: "credit-card" },
+  { label: "E-Money", value: "paypal" },
 ];
 
 export async function uploadImage(uri) {

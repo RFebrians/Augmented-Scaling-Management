@@ -74,7 +74,7 @@ export function ObjectItemPicker(props) {
                     ))}
                   </Picker>
                   <Button
-                    title="Auswahl bestätigen"
+                    title="Konfirmasi Pilihan"
                     onPress={() => closeModal()}
                   />
                 </View>
@@ -146,7 +146,7 @@ export function StringItemPicker(props) {
                     ))}
                   </Picker>
                   <Button
-                    title="Auswahl bestätigen"
+                    title="konfirmasi pilihan"
                     onPress={() => closeModal()}
                   />
                 </View>

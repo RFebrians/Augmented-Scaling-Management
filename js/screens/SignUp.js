@@ -19,14 +19,14 @@ export default function SignUp(props) {
 
   const _signUp = async () => {
     if (!email) {
-      setError("Bitte geben Sie eine E-Mail Adresse ein");
+      setError("silahkan masukan alamat email");
       return;
-    } else if (!password && password.trim() && password.length > 6) {
-      setError("Weak password, minimum 5 chars");
+    } else if (!password && password.trim() && password.length > 7) {
+      setError("Password minimal 6 karakter");
       return;
     } else if (password !== passwordVeri) {
       setError(
-        "Die eingegebenen Passwörter stimmen nicht miteinander überein!"
+        "Password yang dimasukkan tidak cocok"
       );
       return;
     }
@@ -50,40 +50,40 @@ export default function SignUp(props) {
             email: email,
             config: {
               categories: [
-                "keine Angabe",
-                "Gehalt",
-                "Versicherung",
-                "Auto",
-                "Miete",
-                "Haushalt",
-                "Lebensmittel",
-                "Hobbys & Freizeit",
-                "Technik",
+                "tidak ada informasi",
+                "Gaji",
+                "Asuransi",
+                "Mobil",
+                "Sewa",
+                "Rumah tangga",
+                "Kebutuhan Pokok",
+                "Hobi",
+                "Teknologi",
               ],
               stores: [
-                "keine Angabe",
-                "Rewe",
-                "Penny Markt",
-                "Aldi Süd",
-                "Aldi Nord",
-                "Edeka",
-                "Amazon",
-                "Netflix",
-                "Vodafone",
-                "Telekom",
+                "Tidak ada Informasi",
+                "Supermarket",
+                "Alfamart",
+                "Mall",
+                "Pasar",
+                "Shopee",
+                "Tokopedia",
+                "PLN",
+                "WiFi",
+                "PAM",
               ],
               templates: [],
             },
           })
           .then(() => {
             Alert.alert(
-              "Account erstellt",
-              "Dein Account wurde erfolgreich angelegt"
+              "Akun telah dibuat",
+              "Akun anda telah berhasil dibuat"
             );
             navigation.navigate("Login", {});
           })
           .catch((error) => {
-            setError("Es ist ein Fehler aufgetreten: ", error.message);
+            setError("Sebuah kesalahan telah terjadi: ", error.message);
           });
       }
     } catch (e) {
@@ -93,23 +93,23 @@ export default function SignUp(props) {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={{ fontSize: 40, marginBottom: 20 }}>Registrierung</Text>
-      <Text>Bitte füllen Sie die nachfolgenden Felder aus</Text>
+      <Text style={{ fontSize: 40, marginBottom: 20 }}>Daftar</Text>
+      <Text>Silakan isi kolom di bawah ini</Text>
       <TextInput
-        placeholder="E-Mail Adresse"
+        placeholder="Alamat Email"
         style={styles.inputStyle}
         value={email}
         onChangeText={setEmail}
       />
       <TextInput
-        placeholder="Passwort"
+        placeholder="Password"
         style={styles.inputStyle}
         value={password}
         onChangeText={setPassword}
         secureTextEntry
       />
       <TextInput
-        placeholder="Passwort bestätigen"
+        placeholder="Konfirmasi Password"
         style={styles.inputStyle}
         value={passwordVeri}
         onChangeText={setPasswordVeri}
@@ -122,7 +122,7 @@ export default function SignUp(props) {
         onChangeText={setName}
       />
       {error !== "" && <Text style={styles.errorText}>{error}</Text>}
-      <Button title="Account erstellen" onPress={_signUp} />
+      <Button title="Buat Akun" onPress={_signUp} />
     </SafeAreaView>
   );
 }

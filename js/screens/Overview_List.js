@@ -57,7 +57,7 @@ function Overview_List(props) {
   }, [props.financeData]);
 
   const onPressEdit = (item) => {
-    navigation.navigate("Bearbeiten", {
+    navigation.navigate("EditOverview", {
       itemObject: JSON.stringify(item),
     });
   };
@@ -82,7 +82,7 @@ function Overview_List(props) {
         );
       });
 
-    navigation.navigate("Brief-Summary");
+    navigation.navigate("BriefSummary");
   };
 
   return (
@@ -129,7 +129,7 @@ function Overview_List(props) {
                 <OverviewListItem
                   itemObject={item}
                   onPress={() =>
-                    navigation.navigate("Details", {
+                    navigation.navigate("DetailOverview", {
                       itemObject: JSON.stringify(item),
                     })
                   }
@@ -171,7 +171,7 @@ function Overview_List(props) {
                 <OverviewListItem
                   itemObject={item}
                   onPress={() =>
-                    navigation.navigate("Details", {
+                    navigation.navigate("DetailOverview", {
                       itemObject: JSON.stringify(item),
                     })
                   }
@@ -213,7 +213,7 @@ function Overview_List(props) {
                 <OverviewListItem
                   itemObject={item}
                   onPress={() =>
-                    navigation.navigate("Details", {
+                    navigation.navigate("DetailOverview", {
                       itemObject: JSON.stringify(item),
                     })
                   }

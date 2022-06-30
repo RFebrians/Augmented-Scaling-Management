@@ -32,7 +32,7 @@ function Templates_Edit(props) {
   const [category, setCategory] = useState();
   const [amount, setAmount] = useState(0.0);
   const [amountValue, setAmountValue] = useState(0.0);
-  const [unit, setUnit] = useState("€");
+  const [unit, setUnit] = useState(" Rp");
   const [isExpense, setIsExpense] = useState(true);
   const [paymentMethod, setPaymentMethod] = useState(
     selectablePaymentMethods[0].value
@@ -43,7 +43,7 @@ function Templates_Edit(props) {
 
   useEffect(() => {
     navigation.setOptions({
-      title: "Bearbeiten der Vorlage",
+      title: "EditTemplate",
     });
 
     const item = JSON.parse(route.params.itemObject);
@@ -131,20 +131,20 @@ function Templates_Edit(props) {
       })
       .then(() => {
         Alert.alert(
-          "Erfolgreich aktualisiert",
-          "Die Daten wurden erfolgreich in der Cloud gespeichert"
+          "Berhasil diperbarui",
+          "Data telah berhasil disimpan ke cloud"
         );
       })
       .catch((error) => {
         Alert.alert(
-          "Fehler",
-          "Beim Speichern in der Cloud ist ein Fehler aufgetreten: " +
+          "Kesalahan",
+          "Terjadi kesalahan saat menyimpan ke cloud:" +
             error.message
         );
       });
 
     resetForm();
-    navigation.navigate("Vorlagen");
+    navigation.navigate("Template");
   };
 
   return (
@@ -156,9 +156,9 @@ function Templates_Edit(props) {
       <ScrollView keyboardShouldPersistTaps="handled">
         <View>
           <View style={styles.inputView}>
-            <Text style={styles.inputView_text}>Titel</Text>
+            <Text style={styles.inputView_text}>Nama</Text>
             <TextInput
-              placeholder="Titel"
+              placeholder="Nama"
               style={styles.inputView_textInput}
               onChangeText={(val) => setTitle(val)}
               value={title}
@@ -166,7 +166,7 @@ function Templates_Edit(props) {
           </View>
 
           <View style={styles.inputView}>
-            <Text style={styles.inputView_text}>Ausgabe</Text>
+            <Text style={styles.inputView_text}>Pengeluaran</Text>
             <Switch
               onValueChange={() => setIsExpense((prevVal) => !prevVal)}
               value={isExpense}
@@ -174,7 +174,7 @@ function Templates_Edit(props) {
           </View>
 
           <View style={styles.inputView}>
-            <Text style={styles.inputView_text}>Betrag</Text>
+            <Text style={styles.inputView_text}>Jumlah</Text>
             <CurrencyInput
               value={amountValue}
               onChangeValue={setAmount}
@@ -188,9 +188,9 @@ function Templates_Edit(props) {
 
           <View>
             <View style={styles.inputView}>
-              <Text style={styles.inputView_text}>Bezahlmethode</Text>
+              <Text style={styles.inputView_text}>Metode pembayaran</Text>
               <ObjectItemPicker
-                title="Wählen Sie eine Bezahlmethode aus:"
+                title="Pilih metode pembayaran"
                 selectableItems={selectablePaymentMethods}
                 onValueChange={(val) => setPaymentMethod(val)}
                 value={paymentMethod}
@@ -198,9 +198,9 @@ function Templates_Edit(props) {
             </View>
 
             <View style={styles.inputView}>
-              <Text style={styles.inputView_text}>Kategorie</Text>
+              <Text style={styles.inputView_text}>Kategori</Text>
               <StringItemPicker
-                title="Wählen Sie eine Kategorie aus:"
+                title="Kategori"
                 selectableItems={props.currentUser.config.categories}
                 onValueChange={(cat) => setCategory(cat)}
                 value={category}
@@ -208,9 +208,9 @@ function Templates_Edit(props) {
             </View>
 
             <View style={styles.inputView}>
-              <Text style={styles.inputView_text}>Geschäft</Text>
+              <Text style={styles.inputView_text}>Toko</Text>
               <StringItemPicker
-                title="Wählen Sie ein Geschäft aus:"
+                title="Pilih toko :"
                 selectableItems={props.currentUser.config.stores}
                 onValueChange={(cat) => setStore(cat)}
                 value={store}
@@ -218,9 +218,9 @@ function Templates_Edit(props) {
             </View>
 
             <View style={styles.inputView}>
-              <Text style={styles.inputView_text}>Beschreibung</Text>
+              <Text style={styles.inputView_text}>Keterangan</Text>
               <TextInput
-                placeholder="Beschreibung"
+                placeholder="Keterangan"
                 style={styles.inputView_textInput}
                 onChangeText={(val) => setDescription(val)}
                 value={description}
@@ -228,7 +228,7 @@ function Templates_Edit(props) {
             </View>
 
             <View style={styles.inputView}>
-              <Text style={styles.inputView_text}>Abonnement</Text>
+              <Text style={styles.inputView_text}>Berlangganan</Text>
               <Switch
                 onValueChange={() => setIsSubscription((prevVal) => !prevVal)}
                 value={isSubscription}
@@ -239,7 +239,7 @@ function Templates_Edit(props) {
 
         <View style={styles.submitButtonView}>
           <Pressable onPress={saveTemplate} style={styles.submitButton}>
-            <Text style={styles.submitButtonText}>Template speichern</Text>
+            <Text style={styles.submitButtonText}>Simpan Template</Text>
           </Pressable>
         </View>
       </ScrollView>

@@ -45,7 +45,7 @@ function NewEntry(props) {
   const [isSubscription, setIsSubscription] = useState(false);
   const [amount, setAmount] = useState(0.0);
   const [amountValue, setAmountValue] = useState(0.0);
-  const [unit, setUnit] = useState("Rp");
+  const [unit, setUnit] = useState(" Rp ");
   const [paymentMethod, setPaymentMethod] = useState(
     selectablePaymentMethods[0].value
   );
@@ -139,7 +139,7 @@ function NewEntry(props) {
       store: store,
       category: category,
       amount: amountValue,
-      currency: "€",
+      currency: "Rp",
       paymentMethod: paymentMethod,
       isSubscription: isSubscription,
       userId: props.currentUser.userId,
@@ -272,7 +272,7 @@ function NewEntry(props) {
 
             <View>
               <View style={styles.inputView}>
-                <Text style={styles.inputView_text}>Bezahlmethode</Text>
+                <Text style={styles.inputView_text}>Pilih Metode Pembayaran</Text>
                 <ObjectItemPicker
                   title="Pilih metode pembayaran: "
                   selectableItems={selectablePaymentMethods}
@@ -282,7 +282,7 @@ function NewEntry(props) {
               </View>
 
               <View style={styles.inputView}>
-                <Text style={styles.inputView_text}>Kategorie</Text>
+                <Text style={styles.inputView_text}>Kategori</Text>
                 <StringItemPicker
                   title="Pilih kategori"
                   selectableItems={props.currentUser.config.categories}
@@ -292,7 +292,7 @@ function NewEntry(props) {
               </View>
 
               <View style={styles.inputView}>
-                <Text style={styles.inputView_text}>Geschäft</Text>
+                <Text style={styles.inputView_text}>Toko</Text>
                 <StringItemPicker
                   title="Pilih toko"
                   selectableItems={props.currentUser.config.stores}
@@ -345,7 +345,7 @@ function NewEntry(props) {
                     color="white"
                     style={{ marginRight: 5 }}
                   />
-                  <Text style={styles.submitButtonText}>Bild aufnehmen</Text>
+                  <Text style={styles.submitButtonText}>Ambil Gambar</Text>
                 </Pressable>
               </View>
             </View>
@@ -353,14 +353,14 @@ function NewEntry(props) {
 
           <View style={styles.submitButtonView}>
             <Pressable onPress={submitForm} style={styles.submitButton}>
-              <Text style={styles.submitButtonText}>Eintrag speichern</Text>
+              <Text style={styles.submitButtonText}>Simpan entri</Text>
             </Pressable>
           </View>
 
           <View style={styles.submitButtonView}>
             <Pressable onPress={saveAsTemplate} style={styles.submitButton}>
               <Text style={styles.submitButtonText}>
-                Als Template speichern
+                Simpan sebagai template
               </Text>
             </Pressable>
           </View>

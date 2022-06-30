@@ -33,7 +33,7 @@ function Templates_Details(props) {
 
   useLayoutEffect(() => {
     navigation.setOptions({
-      title: "Details zu Vorlage",
+      title: "DetailTemplate",
       headerRight: () => (
         <Pressable
           onPress={() => setDisplayHeaderMenu(!displayHeaderMenu)}
@@ -46,7 +46,7 @@ function Templates_Details(props) {
   }, [navigation, displayHeaderMenu]);
 
   const onPressEdit = () => {
-    navigation.navigate("Bearbeiten", {
+    navigation.navigate("Edit", {
       itemObject: route.params.itemObject,
     });
   };
@@ -66,18 +66,18 @@ function Templates_Details(props) {
       })
       .then(() => {
         Alert.alert(
-          "Löschen erfolgreich 🗑️",
-          "Das Template " + item.title + " wurde gelöscht"
+          " Telah dihapus",
+          "Template " + item.title + " telah dihapus"
         );
       })
       .catch((error) => {
         Alert.alert(
-          "Fehler",
-          "Beim Löschen ist ein Fehler aufgetreten: " + error.message
+          "Kesalahan",
+          "Terjadi kesalahan saat menghapus: " + error.message
         );
       });
 
-    navigation.navigate("Vorlagen");
+    navigation.navigate("Template");
   };
 
   return (
@@ -88,20 +88,20 @@ function Templates_Details(props) {
           style={styles.contentContainer}
           onPress={() => setDisplayHeaderMenu(false)}
         >
-          <DetailsContainer title="Titel" text={item.title} />
-          <DetailsContainer title="Betrag" text={item.amount + item.currency} />
+          <DetailsContainer title="Nama" text={item.title} />
+          <DetailsContainer title="Jumlah" text={item.amount + item.currency} />
           <DetailsContainer
-            title="Bezahlmethode"
+            title="Metode Pembayaran"
             text={
               selectablePaymentMethods.find(
                 (el) => el.value === item.paymentMethod
               ).label
             }
           />
-          <DetailsContainer title="Geschäft" text={item.store} />
-          <DetailsContainer title="Kategorie" text={item.category} />
+          <DetailsContainer title="Toko" text={item.store} />
+          <DetailsContainer title="Kategori" text={item.category} />
           {item.description !== "" && (
-            <DetailsContainer title="Beschreibung" text={item.description} />
+            <DetailsContainer title="Keterangan" text={item.description} />
           )}
         </Pressable>
       </ScrollView>
