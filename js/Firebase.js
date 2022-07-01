@@ -1,15 +1,22 @@
 import firebase from "firebase";
 import "firebase/auth";
 import "firebase/firestore";
-import "firebase/storage"
+import "firebase/storage";
+import {REACT_APIKEY_ENV,
+        REACT_AUTHDOMAIN_ENV,
+        REACT_PROJECTID_ENV,
+        REACT_STORAGEBUCKET_ENV,
+        REACT_MESSAGINGID_ENV,
+        REACT_APPID_ENV} from 'react-native-dotenv';
+
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDzY77UPCkh9LYcNJNw3HFYnv5roYpKP8A",
-  authDomain: "finance-app-cas21.firebaseapp.com",
-  projectId: "finance-app-cas21",
-  storageBucket: "finance-app-cas21.appspot.com",
-  messagingSenderId: "624102838911",
-  appId: "1:624102838911:web:bcec26cc1636cde066a54a",
+  apiKey: "REACT_APIKEY_ENV",
+  authDomain: "REACT_AUTHDOMAIN_ENV",
+  projectId: "REACT_PROJECTID_ENV",
+  storageBucket: "REACT_STORAGEBUCKET_ENV",
+  messagingSenderId: "REACT_MESSAGINGID_ENV",
+  appId: "REACT_APPID_ENV",
 };
 
 export default class Finance_Firebase {
